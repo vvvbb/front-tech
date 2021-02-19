@@ -1,0 +1,178 @@
+body {
+  background-color: goldenrod;
+}
+
+#outsideBlock {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+#outsideBlock * {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#outsideBlock img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  outline: 10px dashed firebrick;
+  /*  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+#outsideBlock #insideBlock {
+  -webkit-box-shadow: 0px 0px 0 0rem #ffffff inset;
+          box-shadow: 0px 0px 0 0rem #ffffff inset;
+  position: absolute;
+  z-index: 1;
+  outline-offset: -2rem;
+  outline: 4px solid rgba(255, 255, 255, 0.8);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#outsideBlock h3,
+#outsideBlock p {
+  color: black;
+  padding: 1rem 0;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#ousideBlock:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#ousideBlock:hover #insideBlock {
+  outline-offset: 0rem;
+  -webkit-box-shadow: 0px 0px 0 calc(2rem - 4px) #ffffff inset;
+          box-shadow: 0px 0px 0 calc(2rem - 4px) #ffffff inset;
+}
+
+/* .ctgFlexItem {
+  @media (max-width: 1200px) {
+    // flex: 0 0 50%; //if 0 0 50% dont put margin
+    flex: 0 0 45%;
+    margin: 2%;
+    max-width: 50%;
+  }
+  @media (min-width: 1200px) {
+    // flex: 0 0 25%;
+    flex: 0 0 30%;
+    // margin: 1.5%; //dont need because space-between
+    max-width: 33%;
+  }
+} */
+/* .ctgFlexItem:before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+  padding-top: 87%;
+} */
+.ctgImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  /* fallback color */
+  background-image: url("../../../LocestTheme/media/categorie_electromenager_groselectromenager.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+a {
+  /* text-decoration: none;
+  box-shadow: 0px 3px 6px #00000029;
+  * {
+    transition: all 0.1s;
+  }
+  > div.ctgOusideBlock {
+    width: 100%;
+    max-height: 462px;
+    height: 18vw;
+
+    @media (min-width: 1700px) {
+      width: 530px;
+      height: 462px;
+    }
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0 0rem white inset;
+    img {
+      // max-width:100%;
+      // max-height:100%;
+      max-width: 100%;
+      height: auto;
+      // overflow: hidden;
+      object-fit: fill;
+
+      background-color: white;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+    }
+    .ctgInnerBlock {
+      margin: 1rem; //if changeed need to change next line height : calc( 100% - x*2 );
+      height: calc(100% - 2rem);
+      width: calc(100% - 2rem);
+      @media (min-width: 992px) {
+        margin: 2rem; //if changeed need to change next line height : calc( 100% - x*2 );
+        height: calc(100% - 4rem);
+        width: calc(100% - 4rem);
+      }
+
+      outline: 2px solid white;
+      @media (min-width: 992px) {
+        outline: 3px solid white;
+      }
+      outline-offset: 0px;
+      div {
+        outline: 0rem solid white;
+        background-color: rgba($color: #ffffff, $alpha: 0.51);
+        padding: 0.5rem 0;
+        h3,
+        p {
+          color: black;
+          font-size: calc(16.125px + 0.5vw); //18px on iPhone6 (375x669px)
+          @media (min-width: 992px) {
+            font-size: calc(18px + 0.625vw); //30px on (1920x1080px)
+          }
+        }
+      }
+    }
+  } */
+  /*   > div.ctgOusideBlock:hover {
+    // box-shadow: 0px 0px 0 calc(2rem - 3px) rgba($color: #0000ff, $alpha: 0.51) inset; //!
+    box-shadow: 0px 0px 0 0.75rem white inset;
+    @media (min-width: 992px) {
+      // Small devices (landscape phones, 576px and up)
+      box-shadow: 0px 0px 0 1.5rem white inset;
+    }
+    transition: all 0.2s;
+    img {
+      transform: scale(1.2);
+      transition: all 0.2s;
+    }
+    div.ctgInnerBlock {
+      outline: 3px solid white;
+      outline-offset: 10px;
+      transition: all 0.2s;
+    }
+  } */
+}
+/*# sourceMappingURL=rectEffect.css.map */

@@ -1,0 +1,91 @@
+.container {
+//   background: aquamarine;
+  background: white;
+  background-color: beige;
+  border-left: 14px solid orangered;
+  border-right: 14px solid orangered;
+  min-height: 100vh;
+}
+
+#slickerCarousel {
+  font-size: 18px;
+  color: black;
+  button:nth-child(1) {
+    left: 0;
+  }
+  button:nth-child(3) {
+    right: 0;
+    top: 0;
+  }
+  .slick-arrow {
+    border: none;
+    background: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .slick-disabled {
+    // color: lightgray;
+    opacity: 0.5;
+  }
+}
+
+.arrowPrev {
+  outline: 10px solid royalblue;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  background: black;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  opacity: 1;
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 55px; /* Set a specific slider handle width */
+  height: 55px; /* Slider handle height */
+  border-radius: 50%;
+  background: #4caf50; /* Green background */
+  background: #000000;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 55px; /* Set a specific slider handle width */
+  height: 55px; /* Slider handle height */
+  border-radius: 50%;
+  background: #4caf50; /* Green background */
+  background: black;
+  border: none;
+  cursor: pointer; /* Cursor on hover */
+}
+
+#textContainer{
+  background-color: bisque;
+  outline: 1px solid red;
+  width: 200px;
+  height: 200px;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+}
