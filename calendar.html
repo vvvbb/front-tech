@@ -15,7 +15,6 @@
 
     <style>
       body {
-        outline: 1px dashed #adff2f;
       }
 
       #calendar-wrapper h4 {
@@ -48,7 +47,7 @@
       }
 
       #calendar #navigation-wrapper {
-		font-size: 6px;
+        font-size: 6px;
 
         flex-direction: row;
         align-items: center;
@@ -66,30 +65,49 @@
       #calendar #navigation-wrapper button:first-of-type {
         transform: rotate(0deg);
       }
-      #navigation-wrapper #next-month{
-		  transform : scaleX(-1);
+      #navigation-wrapper #next-month {
+        transform: scaleX(-1);
       }
 
-	  
+      #calendar-days {
+        background-color: #f5f5f5;
+        border-bottom: 3px solid white;
+      }
+      #calendar-grid {
+        background-color: #f5f5f5;
+      }
     </style>
   </head>
 
   <body>
-    <div id="showcase-wrapper">
-      <div id="myCalendarWrapper"></div>
-      <div id="example">
-        <h3>
-          currentValue:
-          <p id="current-date"></p>
-        </h3>
-        <h3>
-          currentValue.getDay():
-          <p id="current-day"></p>
-        </h3>
-        <h3>
-          currentValue.toDateSring():
-          <p id="current-datestring"></p>
-        </h3>
+    <div class="container">
+<h1>Livraison et reprise des produits</h1>
+
+<div class="row">
+
+<div class="col-6">
+</div>
+
+</div>
+
+
+
+      <div id="showcase-wrapper">
+        <div id="myCalendarWrapper"></div>
+        <div id="example">
+          <h3>
+            currentValue:
+            <p id="current-date"></p>
+          </h3>
+          <h3>
+            currentValue.getDay():
+            <p id="current-day"></p>
+          </h3>
+          <h3>
+            currentValue.toDateSring():
+            <p id="current-datestring"></p>
+          </h3>
+        </div>
       </div>
     </div>
   </body>
