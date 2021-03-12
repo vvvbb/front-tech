@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8"/>
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+		<!-- Bootstrap CSS -->
+		<link
+		rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link
+		rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+		<title>Easy, Simple Counter</title>
+	</head>
+
+	<body>
+		<!-- https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/ -->
+		<div class="container d-flex justify-items-center border border-primary">
+
+			<div class="m-auto">
+				<span class="minus curs d-inline-flex ">
+					<i class="m-auto fas fa-minus"></i>
+				</span>
+				<input type="text " value="0" disabled/>
+				<span class="plus curs d-inline-flex ">
+					<i class="m-auto fas fa-plus"></i>
+				</span>
+
+			</div>
+
+		</div>
+
+
+		<style>
+
+            .container{
+                height : 100vh;
+            }
+
+			.curs {
+				cursor: pointer;
+			}
+			.number {
+				margin: 100px;
+			}
+			.minus,
+			.plus {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				color: #707070;
+				font-weight: bold;
+				border: 1px solid #707070;
+				border-radius: 50%;
+			}
+			svg,i {
+				font-size: 14px;
+			}
+			input {
+				appearance: none;
+				text-align: center;
+				
+				border: 1px solid #ddd;
+				border: none;
+				background-color: transparent;
+				border-radius: 4px;
+				vertical-align: middle;
+				width: 25px;
+				height: 25px;
+				font-weight: 600;
+			}
+		</style>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+		<script>
+			// /INPUT NUMBER
+$('.minus').click(function () {
+var $input = $(this).parent().find('input');
+var count = parseInt($input.val()) - 1;
+count = count < 1 ? 0 : count;
+$input.val(count);
+$input.change();
+return false;
+});
+
+$('.plus').click(function () {
+var $input = $(this).parent().find('input');
+$input.val(parseInt($input.val()) + 1);
+$input.change();
+return false;
+});
+		</script>
+	</body>
+</html>
