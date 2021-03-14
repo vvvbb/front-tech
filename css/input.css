@@ -146,7 +146,7 @@
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  #black_radio input[type="radio"] {
+  #black_version input[type="radio"] {
     --active: #ffffff;
     --active-inner: #000;
     --focus: 2px rgba(00, 00, 00, 0.3);
@@ -171,7 +171,7 @@
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
   }
-  #black_radio input[type="radio"]:after {
+  #black_version input[type="radio"]:after {
     content: "";
     display: block;
     left: 0;
@@ -182,42 +182,42 @@
     transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
     transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
   }
-  #black_radio input[type="radio"]:checked {
+  #black_version input[type="radio"]:checked {
     --b: var(--active);
     --bc: var(--active);
     --d-o: 0.3s;
     --d-t: 0.6s;
     --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
-  #black_radio input[type="radio"]:disabled {
+  #black_version input[type="radio"]:disabled {
     --b: var(--disabled);
     cursor: not-allowed;
     opacity: 0.9;
   }
-  #black_radio input[type="radio"]:disabled:checked {
+  #black_version input[type="radio"]:disabled:checked {
     --b: var(--disabled-inner);
     --bc: var(--border);
   }
-  #black_radio input[type="radio"]:disabled + label {
+  #black_version input[type="radio"]:disabled + label {
     cursor: not-allowed;
   }
-  #black_radio input[type="radio"]:hover:not(:checked):not(:disabled) {
+  #black_version input[type="radio"]:hover:not(:checked):not(:disabled) {
     --bc: var(--border-hover);
   }
-  #black_radio input[type="radio"]:focus {
+  #black_version input[type="radio"]:focus {
     -webkit-box-shadow: 0 0 0 var(--focus);
             box-shadow: 0 0 0 var(--focus);
   }
-  #black_radio input[type="radio"]:not(.switch) {
+  #black_version input[type="radio"]:not(.switch) {
     width: 21px;
   }
-  #black_radio input[type="radio"]:not(.switch):after {
+  #black_version input[type="radio"]:not(.switch):after {
     opacity: var(--o, 0);
   }
-  #black_radio input[type="radio"]:not(.switch):checked {
+  #black_version input[type="radio"]:not(.switch):checked {
     --o: 1;
   }
-  #black_radio input[type="radio"] + label {
+  #black_version input[type="radio"] + label {
     font-size: 14px;
     line-height: 21px;
     display: inline-block;
@@ -225,10 +225,10 @@
     cursor: pointer;
     margin-left: 4px;
   }
-  #black_radio input[type="radio"] {
+  #black_version input[type="radio"] {
     border-radius: 50%;
   }
-  #black_radio input[type="radio"]:after {
+  #black_version input[type="radio"]:after {
     width: 19px;
     height: 19px;
     border-radius: 50%;
@@ -237,9 +237,29 @@
     -webkit-transform: scale(var(--s, 0.7));
             transform: scale(var(--s, 0.7));
   }
-  #black_radio input[type="radio"]:checked {
+  #black_version input[type="radio"]:checked {
     --s: 0.5;
   }
+}
+
+#black_version .square-checkbox {
+  border: 1px solid black;
+  margin: 4px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+#black_version .square-checkbox--clicked .square-checkbox--content {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  width: 12px;
+  height: 12px;
 }
 
 ul {

@@ -82,7 +82,7 @@
 					</ul>
 				</div>
 
-				<div class="col" id="black_radio">
+				<div class="col" id="black_version">
 					<ul>
 						<li>
 							<input id="r1" type="radio" name="radio" value="1">
@@ -91,6 +91,21 @@
 						<li>
 							<input id="r2" type="radio" name="radio" value="2" checked>
 							<label for="r2">Radio</label>
+						</li>
+								
+						<li>
+							<div class="square-checkbox" id="sc1">
+								<div class="square-checkbox--content"></div>
+								<input hidden type="checkbox" id="" name="">
+								<label for="sc1" class="text-nowrap ml-4">Square checkbox</label>
+							</div>
+						</li>
+						<li>
+							<div class="square-checkbox" id="sc2">
+								<div class="square-checkbox--content"></div>
+								<input hidden type="checkbox" id="" name="">
+								<label for="sc2" class="text-nowrap ml-4">Square checkbox</label>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -106,5 +121,21 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 		<script src="js/input.js"></script>
+
+
+		<script>
+		
+		// defautl state set sc2 to checked
+		$("#sc2.square-checkbox").toggleClass("square-checkbox--clicked");
+		$("#sc2.square-checkbox input").prop("checked", "checked");
+
+		// square checkbox
+		$(document).on("click", ".square-checkbox", function () {
+			$(this).toggleClass("square-checkbox--clicked");
+			var $input = $(this).parent().find('input');
+			$input.prop("checked", !$input.prop("checked"));
+		});
+		
+		</script>
 	</body>
 </html>
